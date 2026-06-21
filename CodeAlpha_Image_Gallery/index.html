@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Image Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">GalleryX</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+        <h1>Modern Image Gallery</h1>
+
+        <p>
+            Explore stunning photography from around the world.
+        </p>
+
+        <a href="#gallery" class="btn">
+            Explore Gallery
+        </a>
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div class="stat-box">
+        <h2>50+</h2>
+        <p>Photos</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>10+</h2>
+        <p>Categories</p>
+    </div>
+        <div class="stat-box">
+        <h2>1000+</h2>
+        <p>Visitors</p>
+    </div>
+
+</section>
+
+<section id="gallery">
+
+    <h2 class="section-title">Gallery Collection</h2>
+
+    <div class="filters">
+
+        <button class="active" onclick="filterImages('all')">All</button>
+
+        <button onclick="filterImages('nature')">Nature</button>
+
+        <button onclick="filterImages('cars')">Cars</button>
+
+        <button onclick="filterImages('city')">Cities</button>
+
+        <button onclick="filterImages('tech')">Tech</button>
+
+    </div>
+
+    <div class="gallery">
+
+        <div class="item nature">
+            <img src="https://picsum.photos/id/1018/600/800" onclick="openLightbox(this)">
+            <div class="overlay">Nature</div>
+        </div>
+
+        <div class="item cars">
+            <img src="https://picsum.photos/id/1071/600/400" onclick="openLightbox(this)">
+            <div class="overlay">Cars</div>
+        </div>
+
+        <div class="item city">
+            <img src="https://picsum.photos/id/1011/600/700" onclick="openLightbox(this)">
+            <div class="overlay">City</div>
+        </div>
+
+        <div class="item tech">
+            <img src="https://picsum.photos/id/180/600/500" onclick="openLightbox(this)">
+            <div class="overlay">Technology</div>
+        </div>
+
+        <div class="item nature">
+            <img src="https://picsum.photos/id/1025/600/900" onclick="openLightbox(this)">
+            <div class="overlay">Nature</div>
+        </div>
+
+        <div class="item city">
+            <img src="https://picsum.photos/id/1031/600/450" onclick="openLightbox(this)">
+            <div class="overlay">City</div>
+        </div>
+
+    </div>
+
+</section>
+
+<div id="lightbox">
+
+    <span class="close" onclick="closeLightbox()">&times;</span>
+
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+
+    <img id="lightbox-img">
+
+    <button class="next" onclick="changeImage(1)">❯</button>
+
+</div>
+
+<footer>
+
+    <p>© 2026 Modern Image Gallery | Created by Shubham Tyagi</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
